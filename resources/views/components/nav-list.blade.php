@@ -16,7 +16,7 @@
                 Organisasi
               </x-nav-link>
               {{-- Webinar --}}
-              <x-nav-link href="/organisasi" :active="request()->is('organisasi')">
+              <x-nav-link href="/webinar" :active="request()->is('webinar')">
                 Webinar
               </x-nav-link>
             </div>
