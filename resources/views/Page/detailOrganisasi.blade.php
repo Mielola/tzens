@@ -6,7 +6,7 @@
             <a href="">{{ $post['author'] }} | {{ $post['date'] }}</a>
         </div>
         <p class="my-4 sm:text-justify lg:text-left">{{ Str::limit($post['content'], 200) }}</p>
-        <a href="/organisasi" class="font-medium text-blue-500">&laquo; Back;</a>
+        <a href="/organisasi" class="font-medium text-blue-500">&laquo; Back to organisasi</a>
     </article>
 
 </x-layout>
