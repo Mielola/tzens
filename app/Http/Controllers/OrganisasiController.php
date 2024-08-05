@@ -19,20 +19,16 @@ class OrganisasiController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function search(Request $request)
     {
-        //
-    }
+        $query = $request->input('query');
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
+        // Mencari organisasi berdasarkan nama atau deskripsi yang cocok dengan query
+        $results = Organisasi::where('nama_organisasi', 'LIKE', "%{$query}%")
+            ->orWhere('deskripsi', 'LIKE', "%{$query}%")
+            ->get();
+
+        return view('Page.search-results', compact('results', 'query'));
     }
 
     /**
@@ -41,6 +37,6 @@ class OrganisasiController extends Controller
     public function show(organisasi $organisasi)
     {
         $organisasi = organisasi::all();
-        return view('Page.organisasi', ['title' => 'Organisasi', 'post' => $organisasi]);
+        return view('Page.organisasi', ['title' => 'Temukan Organisasi Impianmu', 'post' => $organisasi]);
     }
 }

@@ -26,8 +26,8 @@ class AppPanelProvider extends PanelProvider
     {
         return $panel
             ->default()
-            ->id('app')
-            ->path('app')
+            ->id('/app')
+            ->path('/app')
             ->login()
             ->profile()
             ->registration()
@@ -51,7 +51,6 @@ class AppPanelProvider extends PanelProvider
             ->discoverWidgets(in: app_path('Filament/App/Widgets'), for: 'App\\Filament\\App\\Widgets')
             ->widgets([
                 Widgets\AccountWidget::class,
-                Widgets\FilamentInfoWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,

@@ -18,9 +18,10 @@ class VerifyIsAdmin
     {
         if (Auth::user() && Auth::user()->is_admin) {
             return $next($request);
+        } else if (Auth::user()) {
         }
 
-        return redirect('/app');
+        return redirect('/dashboard');
     }
 
 }
