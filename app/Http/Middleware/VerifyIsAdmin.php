@@ -16,10 +16,11 @@ class VerifyIsAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (Auth::user() && Auth::user()->is_admin)
+        if (Auth::user() && Auth::user()->is_admin) {
             return $next($request);
+        }
 
-        abort(403, 'TIDAK MEMILIK AKSES');
+        return redirect('/app');
     }
 
 }
