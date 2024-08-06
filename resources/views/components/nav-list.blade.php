@@ -1,4 +1,4 @@
-<nav class="bg-white/15 dark:bg-white/10 backdrop-blur-sm hover:backdrop-blur-lg z-10 fixed w-full"
+<nav class="bg-white/15 dark:bg-white/10 backdrop-blur-sm hover:backdrop-blur-lg z-50 fixed w-full"
     x-data="{ isOpen: false }" style="backdrop-filter: blur(10px);">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">

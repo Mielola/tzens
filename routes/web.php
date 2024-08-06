@@ -1,16 +1,15 @@
 <?php
 
-use App\Http\Controllers\AcaraController;
-use App\Http\Controllers\OrganisasiController;
 use App\Models\Organisasi;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AcaraController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\OrganisasiController;
 
 
 
 // Rute Awal
-Route::get('/', function () {
-    return view('page/welcome', ['title' => 'Home Page']);
-});
+Route::get('/', [DashboardController::class, 'show']);
 
 // Organisasi
 Route::get('/organisasi', [OrganisasiController::class, 'show']);

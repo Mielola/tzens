@@ -34,7 +34,7 @@ class OrganisasiController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(organisasi $organisasi)
+    public function show()
     {
         $organisasi = organisasi::all();
         return view('Page.organisasi', ['title' => 'Temukan Organisasi Impianmu', 'post' => $organisasi]);
