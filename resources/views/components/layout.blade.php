@@ -19,7 +19,7 @@
         </x-header>
 
         <main>
-            <div class="mx-auto w-full px-4 py-6 sm:px-6 lg:px-8 dark:bg-slate-900 dark:text-white">
+            <div class="mx-auto w-full  dark:bg-slate-900 dark:text-white">
                 {{ $slot }}
             </div>
         </main>

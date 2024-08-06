@@ -23,9 +23,18 @@ class organisasi extends Model
         parent::boot();
 
         static::saving(function ($model) {
-            $model->slug = Str::slug($model->nama_organisasi, '-');
+            $slug = Str::slug($model->nama_organisasi, '-');
+            $originalSlug = $slug;
+            $count = 1;
+
+            while (organisasi::where('slug', $slug)->exists()) {
+                $slug = $originalSlug . '-' . $count++;
+            }
+
+            $model->slug = $slug;
         });
     }
+
 }
 
 
