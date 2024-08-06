@@ -10,9 +10,9 @@ class OrganisasiController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index($id)
+    public function index($slug)
     {
-        $post = organisasi::findOrFail($id);
+        $post = organisasi::where('slug', $slug)->firstOrFail();
         return view('Page.detailOrganisasi', [
             'title' => 'Organisasi Detail',
             'post' => $post,

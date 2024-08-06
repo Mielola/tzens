@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AcaraController;
 use App\Http\Controllers\OrganisasiController;
 use App\Models\Organisasi;
 use Illuminate\Support\Facades\Route;
@@ -13,13 +14,11 @@ Route::get('/', function () {
 
 // Organisasi
 Route::get('/organisasi', [OrganisasiController::class, 'show']);
-Route::get('/organisasi/{id}', [OrganisasiController::class, 'index']);
+Route::get('/organisasi/{slug}', [OrganisasiController::class, 'index']);
 Route::get('/search', [OrganisasiController::class, 'search'])->name('search');
 
 // Webinar
-Route::get('/webinar', function () {
-    return view('page/webinar', ['title' => 'Webinar Page']);
-});
+Route::get('/webinar', [AcaraController::class, 'show']);
 
 
 // Route::middleware(['auth'])->group(function () {
