@@ -10,7 +10,7 @@ class Acara extends Model
 {
     use HasFactory;
     protected $table = 'acara';
-    protected $fillable = ['nama_acara', 'deskripsi', 'email acara', 'tanggal mulai', 'tanggal_berakhir', 'benefit', 'image_acara'];
+    protected $fillable = ['nama_acara', 'deskripsi', 'email_acara', 'tanggal_mulai', 'tanggal_berakhir', 'benefit', 'image_acara', 'kategori'];
 
     public static function boot()
     {
