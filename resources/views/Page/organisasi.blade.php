@@ -2,7 +2,7 @@
     <x-slot:title>{{ $title }}</x-slot:title>
     <section class="px-4 py-6 sm:px-6 lg:px-8 max-w-full">
         <div class="justify-center flex flex-col items-center">
-            <form class="w-[73%] mx-auto" method="GET" action="/search">
+            <form class="w-[86%] lg:w-[73%] mx-auto" method="GET" action="/search">
                 <label for="default-search"
                     class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
                 <div class="relative">

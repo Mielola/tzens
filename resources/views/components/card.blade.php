@@ -1,7 +1,7 @@
 @props(['image', 'title', 'desc', 'slug'])
 
 <div
-    class="max-w-80 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:shadow-sm dark:shadow-slate-500 dark:border-gray-700">
+    class="max-w-96 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:shadow-sm dark:shadow-slate-500 dark:border-gray-700">
     <a href="#">
         <img class="rounded-t-lg" src="{{ asset($image) }}" alt="" />
     </a>
